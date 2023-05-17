@@ -1,7 +1,7 @@
 import { useState } from 'react';
 import { v4 as uuid } from 'uuid';
 import axios from 'axios';
-import CountrySelectList from '../../UI/Form/components/CountrySelectList';
+import CountrySelectList from './components/CountrySelectList';
 
 const CreateRecipeForm = () => {
   const [formData, setFormData] = useState({
