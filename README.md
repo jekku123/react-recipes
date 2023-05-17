@@ -7,7 +7,7 @@ dont wanna learn, get no job or if youre just a lazy bastard!
 
 ## Todo
 
--Rename brainfarts
--State management abstraction
--Custom hooks for form handling and fetching
--Decide how to deal with styling without braindamage (use MUI components for all?)
+- Rename brainfarts
+- State management abstraction
+- Custom hooks for form handling and fetching
+- Decide how to deal with styling without braindamage (use MUI components for all?)
