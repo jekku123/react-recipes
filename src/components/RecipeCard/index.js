@@ -6,12 +6,12 @@ const RecipeCard = ({ name, url, country }) => {
   return (
     <div>
       <img src={url} alt={name} style={{ width: '300px' }} />
-      <h3>{name}</h3>
       <img
         src={findFlagUrlByCountryName(country)}
         alt={country}
         style={{ width: '100px' }}
       />
+      <h3>{name}</h3>
       <Link to={name}>See more</Link>
     </div>
   );
