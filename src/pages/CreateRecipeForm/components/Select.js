@@ -2,7 +2,13 @@ const Select = ({ country, handler }) => {
   return (
     <div>
       <label htmlFor='country'>Recipe is from</label>
-      <select name='country' id='country' value={country} onChange={handler}>
+      <select
+        name='country'
+        id='country'
+        value={country}
+        onChange={handler}
+        required
+      >
         <option value='' default>
           Choose a country
         </option>

@@ -46,84 +46,20 @@
       "instructions": "Make it, eat it, drink it."
     },
     {
-      "id": "30952690-2aef-4330-988d-01de9424aabc",
-      "name": "ads",
+      "id": "d7a28221-1948-4e51-99a9-b54fda4adfe0",
+      "name": "",
       "author": "",
-      "country": "",
+      "country": "AD",
       "description": "",
-      "imagepath": "",
+      "imageUrl": "",
       "ingredients": [
         {
-          "id": "6a576f81-cfd9-4367-a6aa-e97551802f99",
-          "quantity": "",
-          "ingredient": ""
+          "id": "61ff6af0-165f-46d6-ba5c-4f46d30d1334",
+          "quantity": "23",
+          "ingredient": "asd"
         }
       ],
-      "instructions": ""
-    },
-    {
-      "id": "4403ceb8-548e-4d39-a970-081d640bbfae",
-      "name": "asddsa",
-      "author": "",
-      "country": "",
-      "description": "",
-      "imagepath": "",
-      "ingredients": [
-        {
-          "id": "bb0fc1ad-3941-4812-a74c-a539d84dbaeb",
-          "quantity": "",
-          "ingredient": ""
-        }
-      ],
-      "instructions": ""
-    },
-    {
-      "id": "80ec6fa9-577d-4449-81d1-bb11d63b1163",
-      "name": "asdasd",
-      "author": "",
-      "country": "",
-      "description": "",
-      "imagepath": "",
-      "ingredients": [
-        {
-          "id": "8fce1820-79ce-423a-9113-0159756f66d2",
-          "quantity": "",
-          "ingredient": ""
-        }
-      ],
-      "instructions": ""
-    },
-    {
-      "id": "82f1d4fa-bdff-40e5-9255-9a4a0acb9c0c",
-      "name": "asdas",
-      "author": "",
-      "country": "",
-      "description": "",
-      "imagepath": "",
-      "ingredients": [
-        {
-          "id": "b8a476c5-2ba5-4627-a542-ee1e2b327e6c",
-          "quantity": "",
-          "ingredient": ""
-        }
-      ],
-      "instructions": ""
-    },
-    {
-      "id": "8eaaa2d6-f197-498f-931f-c31790af7fec",
-      "name": "asdas",
-      "author": "",
-      "country": "",
-      "description": "",
-      "imagepath": "",
-      "ingredients": [
-        {
-          "id": "c6cde6e9-f9bf-4f98-a2e2-6ad9bafcb8a7",
-          "quantity": "",
-          "ingredient": ""
-        }
-      ],
-      "instructions": ""
+      "instructions": "asddasdas"
     }
   ]
 }

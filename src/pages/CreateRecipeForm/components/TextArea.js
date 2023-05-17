@@ -1,13 +1,14 @@
-const TextArea = ({ data, instructions, handleFormChanges }) => {
+const TextArea = ({ data, handler, value }) => {
   return (
     <div>
       <label htmlFor={data}>Instructions</label>
       <textarea
         id={data}
         name={data}
-        onChange={handleFormChanges}
-        value={instructions}
+        onChange={handler}
+        value={value}
         rows='4'
+        required
       ></textarea>
     </div>
   );

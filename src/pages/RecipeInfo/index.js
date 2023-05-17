@@ -29,14 +29,14 @@ const RecipeInfo = () => {
   return isLoading ? (
     <p>Loading..</p>
   ) : (
-    <div className='recipe-info'>
-      <h2 className='recipe-name'>{recipe?.name}</h2>
+    <div>
+      <h2>{recipe?.name}</h2>
       <img
         src={recipe?.imageUrl}
         alt={recipe?.name}
         style={{ width: '200px' }}
       />
-      <div className='recipe-ingredients'>
+      <div>
         <h3>Ingredients</h3>
         {recipe?.ingredients.map((ingredient, i) => (
           <p key={i}>

@@ -8,6 +8,7 @@ const Input = ({ children, data, handler, value }) => {
         name={data}
         onChange={handler}
         value={value}
+        required
       />
     </div>
   );

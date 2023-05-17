@@ -17,6 +17,7 @@ const Ingredients = ({
             data-idx={row.id}
             onChange={handleFormChanges}
             value={row.quantity}
+            required
           />
           <label htmlFor='ingredient'>Ingredient</label>
           <input
@@ -26,6 +27,7 @@ const Ingredients = ({
             data-idx={row.id}
             onChange={handleFormChanges}
             value={row.ingredient}
+            required
           />
           <button type='button' data-idx={row.id} onClick={removeIngredientRow}>
             Remove

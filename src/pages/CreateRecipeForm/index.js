@@ -64,8 +64,8 @@ const CreateRecipeForm = () => {
         />
         <TextArea
           data='instructions'
-          instructions={formData.instructions}
-          handleFormChanges={handleFormChanges}
+          handler={handleFormChanges}
+          value={formData.instructions}
         />
         <button type='submit'>Post recipe</button>
       </form>
