@@ -1,4 +1,4 @@
-const CountrySelectList = ({ country, handler }) => {
+const Select = ({ country, handler }) => {
   return (
     <div>
       <label htmlFor='country'>Recipe is from</label>
@@ -263,4 +263,4 @@ const CountrySelectList = ({ country, handler }) => {
   );
 };
 
-export default CountrySelectList;
+export default Select;
