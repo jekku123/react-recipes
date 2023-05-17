@@ -1,4 +1,4 @@
-const Input = ({ children, data, handler }) => {
+const Input = ({ children, data, handler, value }) => {
   return (
     <div>
       <label htmlFor={data}>{children}</label>
@@ -7,7 +7,7 @@ const Input = ({ children, data, handler }) => {
         id={data}
         name={data}
         onChange={handler}
-        value={data}
+        value={value}
       />
     </div>
   );

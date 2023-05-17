@@ -10,7 +10,7 @@ const initialValues = {
   author: '',
   country: '',
   description: '',
-  imagepath: '',
+  imageUrl: '',
   ingredients: [{ id: uuid(), quantity: '', ingredient: '' }],
   instructions: '',
 };
@@ -37,11 +37,15 @@ const CreateRecipeForm = () => {
         >
           Author
         </Input>
-        <Select country={formData.country} handler={handleFormChanges} />
+        <Select
+          country={formData.country}
+          handler={handleFormChanges}
+          value={formData.country}
+        />
         <Input
           data='description'
           handler={handleFormChanges}
-          value={formData.author}
+          value={formData.description}
         >
           Description
         </Input>
