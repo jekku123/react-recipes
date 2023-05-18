@@ -6,11 +6,10 @@ const useForm = (init) => {
   const [formData, setFormData] = useState(init);
 
   const removeIngredientRow = (e) => {
+    const id = e.target.dataset.idx;
     setFormData((prevData) => ({
       ...prevData,
-      ingredients: prevData.ingredients.filter(
-        (row) => e.target.dataset.idx !== row.id
-      ),
+      ingredients: prevData.ingredients.filter((row) => id !== row.id),
     }));
   };
 
@@ -25,12 +24,12 @@ const useForm = (init) => {
 
   const handleFormChanges = (e) => {
     const { name, value, dataset } = e.target;
-    const { idx } = dataset;
+    const id = dataset.idx;
     if (name === 'ingredient' || name === 'quantity') {
       setFormData((prevData) => ({
         ...prevData,
         ingredients: prevData.ingredients.map((ingredientsObject) => {
-          if (ingredientsObject.id === idx) {
+          if (ingredientsObject.id === id) {
             return {
               ...ingredientsObject,
               [name]: value,

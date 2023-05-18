@@ -2,6 +2,7 @@
 import { useEffect, useState } from 'react';
 import { useNavigate, useParams } from 'react-router-dom';
 import axios from 'axios';
+import { findFlagUrlByCountryName } from 'country-flags-svg';
 
 const RecipeInfo = () => {
   const [recipe, setRecipe] = useState(null);
@@ -35,6 +36,11 @@ const RecipeInfo = () => {
         src={recipe?.imageUrl}
         alt={recipe?.name}
         style={{ width: '200px' }}
+      />
+      <img
+        src={findFlagUrlByCountryName(recipe?.country ?? '')}
+        alt={recipe?.country}
+        style={{ width: '100px' }}
       />
       <div>
         <h3>Ingredients</h3>
