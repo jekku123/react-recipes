@@ -2,48 +2,48 @@
   "recipes": [
     {
       "id": 1,
-      "name": "Good soup",
-      "author": "Helga",
+      "name": "Food 1",
+      "author": "Timo",
       "country": "Finland",
-      "description": "It's a good soup",
+      "description": "Good food",
       "imageUrl": "https://images.unsplash.com/photo-1484723091739-30a097e8f929?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=898&q=80",
       "ingredients": [
         {
           "quantity": "1 l",
-          "ingredient": "water"
+          "ingredient": "Top secret"
         }
       ],
       "instructions": "Make it, eat it."
     },
     {
       "id": 2,
-      "name": "Good soup 2",
+      "name": "Good soup",
       "author": "Timo",
       "country": "Estonia",
-      "description": "It's a good soup too",
+      "description": "Top secret",
       "imageUrl": "https://images.unsplash.com/photo-1484723091739-30a097e8f929?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=898&q=80",
       "ingredients": [
         {
           "quantity": "2 l",
-          "ingredient": "milk"
+          "ingredient": "stuff"
         }
       ],
       "instructions": "Buy it, eat it."
     },
     {
       "id": 3,
-      "name": "Good soup 3",
-      "author": "Frank",
+      "name": "Munch",
+      "author": "Francesco",
       "country": "Spain",
-      "description": "It's a good soup too, yes it is",
+      "description": "For munchies",
       "imageUrl": "https://images.unsplash.com/photo-1484723091739-30a097e8f929?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=898&q=80",
       "ingredients": [
         {
           "quantity": "0.5 l",
-          "ingredient": "beer"
+          "ingredient": "Top secret"
         }
       ],
-      "instructions": "Make it, eat it, drink it."
+      "instructions": "Make it, ***** it."
     }
   ]
 }
