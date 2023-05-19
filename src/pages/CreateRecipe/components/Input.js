@@ -1,11 +1,11 @@
-const Input = ({ children, data, handler, value }) => {
+const Input = ({ name, handler, value, label }) => {
   return (
     <div>
-      <label htmlFor={data}>{children}</label>
+      <label htmlFor={name}>{label}</label>
       <input
         type='text'
-        id={data}
-        name={data}
+        id={name}
+        name={name}
         onChange={handler}
         value={value}
         required

@@ -1,8 +1,8 @@
 const Ingredients = ({
   ingredients,
   handleFormChanges,
-  insertIngredientRow,
-  removeIngredientRow,
+  insertObjectToArray,
+  removeObjectFromArray,
 }) => {
   return (
     <div>
@@ -15,7 +15,7 @@ const Ingredients = ({
             name='quantity'
             id='quantity'
             data-idx={row.id}
-            onChange={handleFormChanges}
+            onChange={(e) => handleFormChanges(e, 'ingredients', 'quantity')}
             value={row.quantity}
             required
           />
@@ -25,17 +25,26 @@ const Ingredients = ({
             name='ingredient'
             id='ingredient'
             data-idx={row.id}
-            onChange={handleFormChanges}
+            onChange={(e) => handleFormChanges(e, 'ingredients', 'ingredient')}
             value={row.ingredient}
             required
           />
-          <button type='button' data-idx={row.id} onClick={removeIngredientRow}>
+          <button
+            type='button'
+            data-idx={row.id}
+            onClick={(e) => removeObjectFromArray(e, 'ingredients')}
+          >
             Remove
           </button>
         </div>
       ))}
 
-      <button type='button' onClick={insertIngredientRow}>
+      <button
+        type='button'
+        onClick={() => {
+          insertObjectToArray('ingredients', ['quantity', 'ingredient']);
+        }}
+      >
         Add more
       </button>
     </div>

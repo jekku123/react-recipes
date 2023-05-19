@@ -1,36 +1,20 @@
-/* eslint-disable react-hooks/exhaustive-deps */
-import { useEffect, useState } from 'react';
-import axios from 'axios';
+import { useState } from 'react';
 import RecipeCard from '../../components/RecipeCard';
+import useAxios from '../../hooks/useAxios';
+const { url } = require('../../config/api.json');
 
 const RecipeList = () => {
-  const [recipes, setRecipes] = useState([]);
-  const [isLoading, setIsLoading] = useState(false);
   const [searchInput, setSearchInput] = useState('');
-
-  useEffect(() => {
-    fetchRecipes();
-  }, []);
-
-  const fetchRecipes = async () => {
-    setIsLoading(true);
-    try {
-      const res = await axios.get('http://localhost:3001/recipes');
-      setRecipes(res.data);
-      setIsLoading(false);
-    } catch (err) {
-      console.log('Error: ' + err);
-    }
-  };
+  const [data, isLoading] = useAxios(url);
 
   return isLoading ? (
     <p>Loading..</p>
   ) : (
     <>
       <input onChange={(e) => setSearchInput(e.target.value)} />
-      <div className='cards'>
+      <div>
         <h2>Our recipes</h2>
-        {recipes
+        {data
           .filter((recipe) => recipe.name.toLowerCase().includes(searchInput))
           .map((recipe) => (
             <RecipeCard
