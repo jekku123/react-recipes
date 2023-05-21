@@ -1,7 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import classes from './index.module.css';
-import Button from '../../UI/Button';
+import Button from '../Button';
 
 const RecipeCard = ({ name, url, country }) => {
     return (

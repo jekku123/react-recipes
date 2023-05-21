@@ -1,4 +1,4 @@
-import Button from '../../../../UI/Button';
+import Button from '../Button';
 import Input from '../Input';
 import classes from './index.module.css';
 

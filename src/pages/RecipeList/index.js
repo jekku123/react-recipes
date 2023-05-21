@@ -2,7 +2,7 @@ import { useState } from 'react';
 import RecipeCard from '../../components/RecipeCard';
 import useAxios from '../../hooks/useAxios';
 import classes from './index.module.css';
-import Input from '../../pages/CreateRecipe/components/Input';
+import Input from '../../components/Input';
 
 const { url } = require('../../config/api.json');
 

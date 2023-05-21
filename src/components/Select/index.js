@@ -1,5 +1,5 @@
 import classes from './index.module.css';
-const { countryOptions } = require('../../../../data/countries.json');
+const { countryOptions } = require('../../data/countries.json');
 
 const Select = ({ name, value, handler, errors }) => {
     return (

@@ -1,12 +1,12 @@
 import axios from 'axios';
 import { v4 as uuid } from 'uuid';
-import useForm from './hooks/useForm';
-import Select from './components/Select';
-import Ingredients from './components/Ingredients';
-import Input from './components/Input';
-import TextArea from './components/TextArea';
-import Button from '../../UI/Button';
-import Form from './components/Form';
+import useForm from '../../hooks/useForm';
+import Select from '../../components/Select';
+import Ingredients from '../../components/Ingredients';
+import Input from '../../components/Input';
+import TextArea from '../../components/TextArea';
+import Button from '../../components/Button';
+
 import classes from './index.module.css';
 
 const initialValues = {
@@ -44,7 +44,7 @@ const CreateRecipe = () => {
     return (
         <>
             <h2 className={classes.h2}>Add new recipe</h2>
-            <Form onSubmit={handleSubmit}>
+            <form onSubmit={handleSubmit} className={classes.form}>
                 <Input
                     label='Name'
                     name='name'
@@ -95,7 +95,7 @@ const CreateRecipe = () => {
                     errors={errors.instructions}
                 />
                 <Button text='Add recipe' type='submit' />
-            </Form>
+            </form>
         </>
     );
 };

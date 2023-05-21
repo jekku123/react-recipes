@@ -1,4 +1,4 @@
-import HeroBanner from '../../components/HeroBanner';
+import HeroBanner from '../../UI/HeroBanner';
 import Card from '../../components/Card';
 import classes from './index.module.css';
 

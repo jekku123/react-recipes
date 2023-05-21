@@ -118,56 +118,24 @@
           "id": "cda181d4-40a8-43aa-8e04-cdc2a930cf79",
           "quantity": "1kg",
           "ingredient": "Peruna"
-        },
-        {
-          "id": "ff2575d6-17a1-47b6-b675-122c67db6001",
-          "quantity": "1",
-          "ingredient": "Makkaraa"
-        },
-        {
-          "id": "8c4d87fd-1bd4-48fa-9d7b-5752792ddfcb",
-          "quantity": "1",
-          "ingredient": "Sipuli"
-        },
-        {
-          "id": "b7844b31-ff59-470f-83af-47516f42e84a",
-          "quantity": "1",
-          "ingredient": "Muna"
         }
-      ],
-      "instructions": "Pilko paista ja syö. Vitun jees"
+      ]
     },
     {
-      "id": "ce48f1b2-368f-4ff5-94c8-bb2191cdfe20",
-      "name": "dasdasd",
-      "author": "adsads",
-      "country": "AI",
-      "description": "dasdsdsdsadasads",
-      "imageUrl": "www.keke.com",
+      "id": "f7b462b8-cf20-4aa0-b78b-cf2a8b18bbbb",
+      "name": "sadads",
+      "author": "sadads",
+      "country": "AS",
+      "description": "dasdsdssad",
+      "imageUrl": "www.ek.com",
       "ingredients": [
         {
-          "id": "d9ea52ff-2761-44ab-baa0-9983d6c51826",
-          "quantity": "dasdsa",
-          "ingredient": "dsadsdas"
+          "id": "561d4345-9493-41c2-b7ca-28906004e827",
+          "quantity": "asddasdsa",
+          "ingredient": "dsadsadsa"
         }
       ],
-      "instructions": "lkasdmladsm"
-    },
-    {
-      "id": "07b0e513-c182-4b42-9147-19ad064b0c57",
-      "name": "dsadsadsdsa",
-      "author": "asdsasddsa",
-      "country": "AQ",
-      "description": "asddsdsadsa",
-      "imageUrl": "www.keke.comas",
-      "ingredients": [
-        {
-          "id": "10059420-1d06-455a-ad3f-f31bbc57b666",
-          "quantity": "asd",
-          "ingredient": "asd"
-        }
-      ],
-      "instructions": "asdsadasd"
+      "instructions": "asddsasdsda"
     }
   ]
 }

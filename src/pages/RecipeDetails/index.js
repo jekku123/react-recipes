@@ -1,12 +1,11 @@
-import { useNavigate, useParams } from 'react-router-dom';
+import { useParams } from 'react-router-dom';
 import useAxios from '../../hooks/useAxios';
 import classes from './index.module.css';
 
 const { url } = require('../../config/api.json');
 
-const RecipeInfo = () => {
+const RecipeDetails = () => {
     const path = useParams();
-    const navigate = useNavigate();
     const [data, isLoading] = useAxios(`${url}?name=${path.name}`);
 
     return isLoading || data.country === undefined ? (
@@ -49,4 +48,4 @@ const RecipeInfo = () => {
     );
 };
 
-export default RecipeInfo;
+export default RecipeDetails;
