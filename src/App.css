@@ -147,3 +147,13 @@ select {
     height: 30px;
     padding: 0px 10px;
 }
+
+textarea {
+    padding: 10px 10px;
+}
+
+input:hover,
+select:hover,
+textarea:hover {
+    box-shadow: 0 0 2px rgb(192, 93, 1);
+}

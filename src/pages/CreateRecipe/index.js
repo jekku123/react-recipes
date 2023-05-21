@@ -74,7 +74,7 @@ const CreateRecipe = () => {
                     errors={errors.description}
                 />
                 <Input
-                    label='Image'
+                    label='Image url'
                     name='imageUrl'
                     handler={handleFormChanges}
                     value={formData.imageUrl}

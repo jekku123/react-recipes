@@ -1,7 +1,16 @@
-select {
-    width: 422px;
+.container {
+    margin: 10px 0 20px;
+    position: relative;
 }
 
-.container {
-    margin: 20px 0;
+.container span {
+    position: absolute;
+    top: 0;
+    right: 0;
+    color: red;
+    font-size: 0.8em;
+}
+
+select {
+    width: 422px;
 }

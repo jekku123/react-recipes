@@ -5,13 +5,7 @@ const Select = ({ name, value, handler, errors }) => {
     return (
         <div className={classes.container}>
             <label htmlFor='country'>Recipe is from</label>
-            <select
-                name={name}
-                id={name}
-                value={value}
-                onChange={handler}
-                required
-            >
+            <select name={name} id={name} value={value} onChange={handler}>
                 <option value='' default>
                     Choose a country
                 </option>

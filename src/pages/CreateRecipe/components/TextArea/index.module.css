@@ -1,17 +1,11 @@
 .container {
-    margin: 20px 0;
-}
-
-textarea {
-    padding: 10px 10px;
-}
-.textarea {
+    margin: 10px 0 20px;
     position: relative;
 }
 
-.textarea span {
+.container span {
     position: absolute;
-    top: -18px;
+    top: 0;
     right: 0;
     color: red;
     font-size: 0.8em;

@@ -7,6 +7,7 @@ const Ingredients = ({
     handler,
     insertObjectToArray,
     removeObjectFromArray,
+    errors,
 }) => {
     return (
         <div className={classes.container}>
@@ -14,7 +15,7 @@ const Ingredients = ({
             <br />
             <br />
 
-            {ingredients.map((row) => (
+            {ingredients.map((row, i) => (
                 <div className={classes.ingredients} key={row.id}>
                     <Input
                         label='Quantity'
@@ -23,6 +24,7 @@ const Ingredients = ({
                         value={row.quantity}
                         idx={row.id}
                         size='sm'
+                        errors={errors[i].quantity}
                     />
                     <Input
                         label='Ingredient'
@@ -31,8 +33,10 @@ const Ingredients = ({
                         value={row.ingredient}
                         idx={row.id}
                         size='sm'
+                        errors={errors[i].ingredient}
                     />
-                    {/* <div>
+                    {/* UNCOMMENT TO GET DELETE BUTTON 
+                     <div>
                         <Button
                             text='Remove'
                             idx={row.id}
@@ -52,6 +56,7 @@ const Ingredients = ({
                     ]);
                 }}
             />
+            <br />
         </div>
     );
 };

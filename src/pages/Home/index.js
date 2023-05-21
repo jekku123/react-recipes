@@ -17,7 +17,7 @@ const Home = () => {
                 <Card
                     title='Add recipes'
                     content='Recipe from your country is missing? No worries, add one!'
-                    path='/recipes/create'
+                    path='/create'
                     link='Add recipes'
                 />
                 <Card

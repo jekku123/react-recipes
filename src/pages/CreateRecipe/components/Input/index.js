@@ -1,10 +1,10 @@
 import classes from './index.module.css';
 
 const Input = ({
+    label,
     name,
     handler,
     value,
-    label,
     type = 'text',
     idx = undefined,
     errors = undefined,
@@ -14,24 +14,21 @@ const Input = ({
     return (
         <div className={classes.container}>
             <label htmlFor={name}>{label}</label>
-            <div className={classes.input}>
-                <input
-                    className={
-                        (size === 'sm' && classes.sm) ||
-                        (size === 'md' && classes.md) ||
-                        (size === 'xl' && classes.xl)
-                    }
-                    type={type}
-                    id={name}
-                    name={name}
-                    data-idx={idx}
-                    onChange={handler}
-                    value={value}
-                    placeholder={placeholder}
-                    required
-                />
-                <span>{errors}</span>
-            </div>
+            <input
+                className={
+                    (size === 'sm' && classes.sm) ||
+                    (size === 'md' && classes.md) ||
+                    (size === 'xl' && classes.xl)
+                }
+                type={type}
+                id={name}
+                name={name}
+                data-idx={idx}
+                onChange={handler}
+                value={value}
+                placeholder={placeholder}
+            />
+            <span>{errors}</span>
         </div>
     );
 };

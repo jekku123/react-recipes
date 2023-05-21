@@ -1,13 +1,11 @@
 import { useCallback, useState } from 'react';
 import { v4 as uuid } from 'uuid';
 
-// Fun :D <3
-
 const useForm = (init, submit) => {
     const [formData, setFormData] = useState(init);
     const [errors, setErrors] = useState(init);
 
-    const removeObjectFromArray = (e, objArrayIdentifier) => {
+    const removeObjectFromArray = useCallback((e, objArrayIdentifier) => {
         const id = e.target.dataset.idx;
         setFormData((prevData) => ({
             ...prevData,
@@ -15,25 +13,39 @@ const useForm = (init, submit) => {
                 (obj) => id !== obj.id
             ),
         }));
-    };
+    }, []);
 
-    const insertObjectToArray = (objArrayIdentifier, fields) => {
-        const newField = fields.reduce(
-            (acc, curr) => ({ ...acc, id: uuid(), [curr]: '' }),
-            {}
-        );
-        setFormData((prevData) => ({
-            ...prevData,
-            [objArrayIdentifier]: [...prevData[objArrayIdentifier], newField],
-        }));
-    };
+    const insertObjectToArray = useCallback(
+        (objArrayIdentifier, fields) => {
+            const newField = fields.reduce(
+                (acc, curr) => ({ ...acc, id: uuid(), [curr]: '' }),
+                {}
+            );
+            const newData = {
+                ...formData,
+                [objArrayIdentifier]: [
+                    ...formData[objArrayIdentifier],
+                    newField,
+                ],
+            };
+
+            const newErrors = {
+                ...errors,
+                [objArrayIdentifier]: [...errors[objArrayIdentifier], newField],
+            };
+            setFormData(newData);
+            setErrors(newErrors);
+        },
+        [formData, errors]
+    );
 
     const handleFormChanges = useCallback(
         (e, objArrayIdentifier, arrayObjKey) => {
             const { name, value, dataset } = e.target;
             const id = dataset.idx;
-            validate(name, value);
+
             if (name === arrayObjKey) {
+                validate(name, value, id, objArrayIdentifier);
                 setFormData((prevData) => ({
                     ...prevData,
                     [objArrayIdentifier]: prevData[objArrayIdentifier].map(
@@ -49,6 +61,7 @@ const useForm = (init, submit) => {
                     ),
                 }));
             } else {
+                validate(name, value);
                 setFormData((prevState) => ({
                     ...prevState,
                     [name]: value,
@@ -58,132 +71,160 @@ const useForm = (init, submit) => {
         []
     );
 
-    const validate = (name, value) => {
+    const handleSubmit = (e) => {
+        e.preventDefault();
+        if (!checkErrors()) {
+            submit(formData);
+            setFormData(init);
+        }
+    };
+
+    const checkErrors = () => {
+        let isError = false;
+
+        for (const [key, value] of Object.entries(errors)) {
+            if (key === 'ingredients') {
+                if (
+                    value.some(
+                        (err) => err.quantity !== '' || err.ingredient !== ''
+                    )
+                ) {
+                    isError = true;
+                }
+            } else {
+                if (value !== '') {
+                    isError = true;
+                }
+            }
+        }
+        for (const [key, value] of Object.entries(formData)) {
+            if (key === 'ingredients') {
+                if (
+                    value.forEach((el, i) => {
+                        validate('ingredient', value[i].ingredient, el.id);
+                        validate('quantity', value[i].quantity, el.id);
+                    })
+                ) {
+                    isError = true;
+                }
+            } else {
+                if (value === '') {
+                    validate(key, value);
+                    isError = true;
+                }
+            }
+        }
+
+        return isError;
+    };
+
+    const validate = (name, value, id) => {
         switch (name) {
             case 'name':
-                if (value.length < 3 && value.length !== 0) {
-                    setErrors((prevErrors) => {
-                        return {
-                            ...prevErrors,
-                            name: 'Name must be atleast 3 characters',
-                        };
-                    });
-                } else {
-                    setErrors((prevErrors) => {
-                        return {
-                            ...prevErrors,
-                            name: '',
-                        };
-                    });
-                }
+                setErrors((prevErrors) => {
+                    return {
+                        ...prevErrors,
+                        name:
+                            value.length < 3
+                                ? 'Name must be atleast 3 characters'
+                                : '',
+                    };
+                });
+
                 break;
 
             case 'author':
-                if (value.length < 3 && value.length !== 0) {
-                    setErrors((prevErrors) => {
-                        return {
-                            ...prevErrors,
-                            author: 'Name must be atleast 3 characters',
-                        };
-                    });
-                } else {
-                    setErrors((prevErrors) => {
-                        return {
-                            ...prevErrors,
-                            author: '',
-                        };
-                    });
-                }
+                setErrors((prevErrors) => {
+                    return {
+                        ...prevErrors,
+                        author:
+                            value.length < 3
+                                ? 'Author must be atleast 3 characters'
+                                : '',
+                    };
+                });
+
                 break;
 
             case 'country':
-                if (value.length < 3 && value.length !== 0) {
-                    setErrors((prevErrors) => {
-                        return {
-                            ...prevErrors,
-                            country: 'Name must be atleast 3 characters',
-                        };
-                    });
-                } else {
-                    setErrors((prevErrors) => {
-                        return {
-                            ...prevErrors,
-                            country: '',
-                        };
-                    });
-                }
+                setErrors((prevErrors) => {
+                    return {
+                        ...prevErrors,
+                        country: value === '' ? 'Please choose a country' : '',
+                    };
+                });
+
                 break;
 
             case 'description':
-                if (value.length < 3 && value.length !== 0) {
-                    setErrors((prevErrors) => {
-                        return {
-                            ...prevErrors,
-                            description: 'Name must be atleast 3 characters',
-                        };
-                    });
-                } else {
-                    setErrors((prevErrors) => {
-                        return {
-                            ...prevErrors,
-                            description: '',
-                        };
-                    });
-                }
+                setErrors((prevErrors) => {
+                    return {
+                        ...prevErrors,
+                        description:
+                            value.length < 8
+                                ? 'Description must be atleast 8 characters'
+                                : '',
+                    };
+                });
+
                 break;
 
             case 'imageUrl':
-                if (value.length < 3 && value.length !== 0) {
-                    setErrors((prevErrors) => {
-                        return {
-                            ...prevErrors,
-                            imageUrl: 'Name must be atleast 3 characters',
-                        };
-                    });
-                } else {
-                    setErrors((prevErrors) => {
-                        return {
-                            ...prevErrors,
-                            imageUrl: '',
-                        };
-                    });
-                }
+                setErrors((prevErrors) => {
+                    return {
+                        ...prevErrors,
+                        imageUrl: !isValidUrl(value) ? 'Not a valid url' : '',
+                    };
+                });
+
                 break;
 
-            case 'ingredients':
-                if (value.length < 3 && value.length !== 0) {
-                    setErrors((prevErrors) => {
-                        return {
-                            ...prevErrors,
-                            ingredients: 'Name must be atleast 3 characters',
-                        };
-                    });
-                } else {
-                    setErrors((prevErrors) => {
-                        return {
-                            ...prevErrors,
-                            ingredients: '',
-                        };
-                    });
-                }
+            case 'ingredient':
+                setErrors((prevErrors) => ({
+                    ...prevErrors,
+                    ingredients: prevErrors.ingredients.map((obj) => {
+                        if (obj.id === id) {
+                            return {
+                                ...obj,
+                                ingredient: value.length < 3 ? 'Too short' : '',
+                            };
+                        } else {
+                            return obj;
+                        }
+                    }),
+                }));
+
+                break;
+
+            case 'quantity':
+                setErrors((prevErrors) => ({
+                    ...prevErrors,
+                    ingredients: prevErrors.ingredients.map((obj) => {
+                        if (obj.id === id) {
+                            return {
+                                ...obj,
+                                quantity:
+                                    value.length < 1 ? 'Quantity needed' : '',
+                            };
+                        } else {
+                            return obj;
+                        }
+                    }),
+                }));
+
                 break;
 
             case 'instructions':
-                if (value.length < 3 && value.length !== 0) {
-                    setErrors((prevErrors) => {
-                        return {
-                            ...prevErrors,
-                            instructions: 'Name must be atleast 3 characters',
-                        };
-                    });
-                } else {
-                    setErrors((prevErrors) => {
-                        return {
-                            ...prevErrors,
-                            instructions: '',
-                        };
-                    });
-                }
+                setErrors((prevErrors) => {
+                    return {
+                        ...prevErrors,
+                        instructions:
+                            value.length < 8
+                                ? 'Instructions must be atleast 8 characters'
+                                : '',
+                    };
+                });
+
                 break;
 
             default:
@@ -191,10 +232,17 @@ const useForm = (init, submit) => {
         }
     };
 
-    const handleSubmit = (e) => {
-        e.preventDefault();
-        submit(formData);
-        setFormData(init);
+    const isValidUrl = (url) => {
+        var regex = new RegExp(
+            '^(https?:\\/\\/)?' +
+                '((([a-z\\d]([a-z\\d-]*[a-z\\d])*)\\.)+[a-z]{2,}|' +
+                '((\\d{1,3}\\.){3}\\d{1,3}))' +
+                '(\\:\\d+)?(\\/[-a-z\\d%_.~+]*)*' +
+                '(\\?[;&a-z\\d%_.~+=-]*)?' +
+                '(\\#[-a-z\\d_]*)?$',
+            'i'
+        );
+        return regex.test(url);
     };
 
     return {
