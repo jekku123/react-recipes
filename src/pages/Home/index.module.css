@@ -1,0 +1,11 @@
+.home h3 {
+    padding: 50px;
+    font-size: 1.3em;
+    text-align: center;
+}
+
+.cards {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}

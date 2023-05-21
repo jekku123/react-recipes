@@ -1,0 +1,17 @@
+.banner {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    background-color: rgb(86, 83, 83);
+    color: white;
+    height: 250px;
+    padding: 0 5em;
+}
+
+.banner h2 {
+    font-size: 3rem;
+}
+
+.banner a {
+    text-decoration: none;
+}

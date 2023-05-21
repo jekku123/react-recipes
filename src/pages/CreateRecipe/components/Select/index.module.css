@@ -1,0 +1,13 @@
+select {
+    display: block;
+    border-radius: 5px;
+    border: 1px solid black;
+    height: 30px;
+    padding: 0px 10px;
+    width: 422px;
+    font-family: inherit;
+}
+
+.container {
+    margin: 20px 0;
+}

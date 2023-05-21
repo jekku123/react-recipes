@@ -61,7 +61,7 @@ const useForm = (init, submit) => {
     const validate = (name, value) => {
         switch (name) {
             case 'name':
-                if (value.length < 3) {
+                if (value.length < 3 && value.length !== 0) {
                     setErrors((prevErrors) => {
                         return {
                             ...prevErrors,
@@ -79,7 +79,7 @@ const useForm = (init, submit) => {
                 break;
 
             case 'author':
-                if (value.length < 3) {
+                if (value.length < 3 && value.length !== 0) {
                     setErrors((prevErrors) => {
                         return {
                             ...prevErrors,
@@ -97,7 +97,7 @@ const useForm = (init, submit) => {
                 break;
 
             case 'country':
-                if (value.length < 3) {
+                if (value.length < 3 && value.length !== 0) {
                     setErrors((prevErrors) => {
                         return {
                             ...prevErrors,
@@ -115,7 +115,7 @@ const useForm = (init, submit) => {
                 break;
 
             case 'description':
-                if (value.length < 3) {
+                if (value.length < 3 && value.length !== 0) {
                     setErrors((prevErrors) => {
                         return {
                             ...prevErrors,
@@ -133,7 +133,7 @@ const useForm = (init, submit) => {
                 break;
 
             case 'imageUrl':
-                if (value.length < 3) {
+                if (value.length < 3 && value.length !== 0) {
                     setErrors((prevErrors) => {
                         return {
                             ...prevErrors,
@@ -151,7 +151,7 @@ const useForm = (init, submit) => {
                 break;
 
             case 'ingredients':
-                if (value.length < 3) {
+                if (value.length < 3 && value.length !== 0) {
                     setErrors((prevErrors) => {
                         return {
                             ...prevErrors,
@@ -169,7 +169,7 @@ const useForm = (init, submit) => {
                 break;
 
             case 'instructions':
-                if (value.length < 3) {
+                if (value.length < 3 && value.length !== 0) {
                     setErrors((prevErrors) => {
                         return {
                             ...prevErrors,

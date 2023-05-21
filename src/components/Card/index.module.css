@@ -1,0 +1,18 @@
+.card {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 20px;
+    width: 300px;
+    min-height: 150px;
+    border: 1px solid #333;
+}
+
+.card h4 {
+    font-size: 1.7em;
+}
+
+.card a {
+    color: rgb(185, 48, 48);
+    text-decoration: underline;
+}

@@ -1,0 +1,24 @@
+input {
+    display: block;
+    border-radius: 5px;
+    border: 1px solid black;
+    height: 30px;
+    padding: 0px 10px;
+    outline: none;
+}
+
+.container {
+    margin: 20px 0;
+}
+
+.sm {
+    width: 184px;
+}
+
+.md {
+    width: 400px;
+}
+
+.xl {
+    width: 600px;
+}

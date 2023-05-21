@@ -1,0 +1,23 @@
+.container {
+    margin: 20px 0;
+}
+
+textarea {
+    display: block;
+    border-radius: 5px;
+    border: 1px solid black;
+    padding: 10px 10px;
+    outline: none;
+}
+
+.sm {
+    width: 200px;
+}
+
+.md {
+    width: 400px;
+}
+
+.xl {
+    width: 600px;
+}

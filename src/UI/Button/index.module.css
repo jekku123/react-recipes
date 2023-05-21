@@ -1,0 +1,15 @@
+.btn {
+    height: 30px;
+    border-radius: 5px;
+    border: none;
+    font-family: inherit;
+    padding: 0.5em 1em;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgb(215, 215, 215);
+}
+
+.btn:hover {
+    background-color: rgb(179, 177, 177);
+}
