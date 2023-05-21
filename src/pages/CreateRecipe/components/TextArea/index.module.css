@@ -3,11 +3,18 @@
 }
 
 textarea {
-    display: block;
-    border-radius: 5px;
-    border: 1px solid black;
     padding: 10px 10px;
-    outline: none;
+}
+.textarea {
+    position: relative;
+}
+
+.textarea span {
+    position: absolute;
+    top: -18px;
+    right: 0;
+    color: red;
+    font-size: 0.8em;
 }
 
 .sm {

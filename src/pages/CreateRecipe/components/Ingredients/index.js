@@ -10,7 +10,9 @@ const Ingredients = ({
 }) => {
     return (
         <div className={classes.container}>
-            <label>Ingredients</label>
+            <label className={classes.label}>Ingredients</label>
+            <br />
+            <br />
 
             {ingredients.map((row) => (
                 <div className={classes.ingredients} key={row.id}>
@@ -42,7 +44,7 @@ const Ingredients = ({
                 </div>
             ))}
             <Button
-                text='Add more'
+                text='Add another'
                 handler={() => {
                     insertObjectToArray('ingredients', [
                         'quantity',

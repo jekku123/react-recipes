@@ -14,30 +14,37 @@ const RecipeInfo = () => {
     ) : (
         <div className={classes.container}>
             <h2>{data.name}</h2>
+            <div className={classes.gridContainer}>
+                <div className={classes.gridItem}>
+                    <img
+                        className={classes.image}
+                        src={data.imageUrl}
+                        alt={data.name}
+                    />
+                    <img
+                        className={classes.flag}
+                        src={`https://flagsapi.com/${data.country}/shiny/64.png`}
+                        alt={data.country}
+                    />
+                </div>
+                <div className={classes.gridItem}>
+                    <p>{data.description}</p>
+                    <p>{data.author}</p>
+                </div>
+                <div className={classes.gridItem}>
+                    <h3>Ingredients: </h3>
+                    {data.ingredients?.map((ingredient, i) => (
+                        <div className={classes.ingredientRow} key={i}>
+                            {ingredient.quantity} - {ingredient.ingredient}
+                        </div>
+                    ))}
+                </div>
 
-            <img
-                className={classes.image}
-                src={data.imageUrl}
-                alt={data.name}
-            />
-            <img
-                className={classes.flag}
-                src={`https://flagsapi.com/${data.country}/shiny/64.png`}
-                alt={data.country}
-            />
-
-            <h3>Ingredients: </h3>
-            {data.ingredients?.map((ingredient, i) => (
-                <p key={i}>
-                    {ingredient.quantity} - {ingredient.ingredient}
-                </p>
-            ))}
-
-            <p>Description: {data.description}</p>
-            <p>Author: {data.author}</p>
-            <p>Preparation: {data.instructions}</p>
-
-            <button onClick={() => navigate(-1)}>Go back</button>
+                <div className={classes.gridItem}>
+                    <h3>Preparation</h3>
+                    <p>{data.instructions}</p>
+                </div>
+            </div>
         </div>
     );
 };

@@ -136,5 +136,14 @@ select,
 textarea {
     margin-top: 5px;
     font-family: inherit;
-    border-color: rgb(134, 134, 134);
+    display: block;
+    border-radius: 5px;
+    outline: none;
+    border: 1px solid #c0c0c0;
+}
+
+input,
+select {
+    height: 30px;
+    padding: 0px 10px;
 }

@@ -7,20 +7,20 @@ import RecipeInfo from './pages/RecipeInfo';
 import CreateRecipe from './pages/CreateRecipe';
 
 const App = () => {
-  return (
-    <>
-      <BrowserRouter>
-        <Routes>
-          <Route path='/' element={<Layout />}>
-            <Route index element={<Home />} />
-            <Route path='/recipes' element={<RecipeList />} />
-            <Route path='/recipes/create' element={<CreateRecipe />} />
-            <Route path='/recipes/:name' element={<RecipeInfo />} />
-          </Route>
-        </Routes>
-      </BrowserRouter>
-    </>
-  );
+    return (
+        <>
+            <BrowserRouter>
+                <Routes>
+                    <Route path='/' element={<Layout />}>
+                        <Route index element={<Home />} />
+                        <Route path='/recipes' element={<RecipeList />} />
+                        <Route path='/create' element={<CreateRecipe />} />
+                        <Route path='/recipe/:name' element={<RecipeInfo />} />
+                    </Route>
+                </Routes>
+            </BrowserRouter>
+        </>
+    );
 };
 
 export default App;

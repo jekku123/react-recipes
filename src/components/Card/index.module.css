@@ -14,5 +14,9 @@
 
 .card a {
     color: rgb(185, 48, 48);
+    text-decoration: none;
+}
+
+.card a:hover {
     text-decoration: underline;
 }

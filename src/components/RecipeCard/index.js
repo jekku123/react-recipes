@@ -1,6 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import classes from './index.module.css';
+import Button from '../../UI/Button';
 
 const RecipeCard = ({ name, url, country }) => {
     return (
@@ -14,7 +15,7 @@ const RecipeCard = ({ name, url, country }) => {
             <div className={classes.info}>
                 <h3>{name}</h3>
                 <Link to={name}>
-                    <button>See more</button>
+                    <Button text='See more' />
                 </Link>
             </div>
         </div>

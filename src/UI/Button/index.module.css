@@ -7,9 +7,12 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    background-color: rgb(215, 215, 215);
+    background-color: rgb(188, 92, 3);
+    transition: 0.5s ease;
+    box-shadow: 0 0 2px black;
+    color: antiquewhite;
 }
 
 .btn:hover {
-    background-color: rgb(179, 177, 177);
+    background-color: rgb(223, 115, 14);
 }

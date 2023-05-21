@@ -1,11 +1,7 @@
 nav ul {
     list-style: none;
     display: flex;
-    gap: 10px;
-}
-
-nav ul li {
-    padding: 1em;
+    gap: 20px;
 }
 
 nav ul li a {
@@ -18,7 +14,6 @@ nav ul li a:hover {
     color: rgb(230, 229, 229);
 }
 
-nav ul li a.active {
-    text-decoration: underline;
-    color: #c01919;
+[aria-current='page'] {
+    color: rgb(255, 255, 255);
 }

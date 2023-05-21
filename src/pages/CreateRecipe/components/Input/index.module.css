@@ -1,17 +1,20 @@
-input {
-    display: block;
-    border-radius: 5px;
-    border: 1px solid black;
-    height: 30px;
-    padding: 0px 10px;
-    outline: none;
-}
-
 .container {
-    margin: 20px 0;
+    margin-bottom: 20px;
 }
 
-.sm {
+.input {
+    position: relative;
+}
+
+.input span {
+    position: absolute;
+    top: -18px;
+    right: 0;
+    color: red;
+    font-size: 0.8em;
+}
+
+.container .sm {
     width: 184px;
 }
 

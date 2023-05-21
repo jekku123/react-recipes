@@ -1,17 +1,39 @@
-.banner {
+.container {
     display: flex;
     flex-direction: column;
-    justify-content: space-evenly;
+    justify-content: center;
+    align-items: center;
     background-color: rgb(86, 83, 83);
     color: white;
-    height: 250px;
-    padding: 0 5em;
+    height: 300px;
+    position: relative;
 }
 
-.banner h2 {
+.container video {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    object-fit: cover;
+    z-index: 0;
+}
+
+.content {
+    display: flex;
+    flex-direction: column;
+    width: 80%;
+    z-index: 1;
+    position: relative;
+    gap: 50px;
+}
+
+.container p {
+    line-height: 1.4;
+}
+
+.container h2 {
     font-size: 3rem;
 }
 
-.banner a {
+.container a {
     text-decoration: none;
 }
