@@ -6,7 +6,7 @@ import Ingredients from '../../components/Ingredients';
 import Input from '../../components/Input';
 import TextArea from '../../components/TextArea';
 import Button from '../../components/Button';
-
+import Form from '../../UI/Form';
 import classes from './index.module.css';
 
 const initialValues = {
@@ -44,7 +44,7 @@ const CreateRecipe = () => {
     return (
         <>
             <h2 className={classes.h2}>Add new recipe</h2>
-            <form onSubmit={handleSubmit} className={classes.form}>
+            <Form onSubmit={handleSubmit}>
                 <Input
                     label='Name'
                     name='name'
@@ -95,7 +95,7 @@ const CreateRecipe = () => {
                     errors={errors.instructions}
                 />
                 <Button text='Add recipe' type='submit' />
-            </form>
+            </Form>
         </>
     );
 };
