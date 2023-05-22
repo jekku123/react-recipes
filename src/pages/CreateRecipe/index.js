@@ -80,13 +80,51 @@ const CreateRecipe = () => {
                     value={formData.imageUrl}
                     errors={errors.imageUrl}
                 />
-                <Ingredients
-                    ingredients={formData.ingredients}
-                    handler={handleFormChanges}
-                    insertObjectToArray={insertObjectToArray}
-                    removeObjectFromArray={removeObjectFromArray}
-                    errors={errors.ingredients}
-                />
+                <Ingredients>
+                    {formData.ingredients.map((row, i) => (
+                        <div className={classes.ingredients} key={row.id}>
+                            <Input
+                                label='Quantity'
+                                name='quantity'
+                                handler={(e) =>
+                                    handleFormChanges(
+                                        e,
+                                        'ingredients',
+                                        'quantity'
+                                    )
+                                }
+                                value={row.quantity}
+                                idx={row.id}
+                                size='sm'
+                                errors={errors.ingredients[i].quantity}
+                            />
+                            <Input
+                                label='Ingredient'
+                                name='ingredient'
+                                handler={(e) =>
+                                    handleFormChanges(
+                                        e,
+                                        'ingredients',
+                                        'ingredient'
+                                    )
+                                }
+                                value={row.ingredient}
+                                idx={row.id}
+                                size='sm'
+                                errors={errors.ingredients[i].ingredient}
+                            />
+                        </div>
+                    ))}
+                    <Button
+                        text='Add another'
+                        handler={() => {
+                            insertObjectToArray('ingredients', [
+                                'quantity',
+                                'ingredient',
+                            ]);
+                        }}
+                    />
+                </Ingredients>
                 <TextArea
                     label='Instructions'
                     name='instructions'
