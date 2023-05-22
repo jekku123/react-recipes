@@ -3,6 +3,10 @@
     position: relative;
 }
 
+.error {
+    border-color: red;
+}
+
 .container span {
     position: absolute;
     top: 0;

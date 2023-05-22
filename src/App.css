@@ -157,3 +157,7 @@ select:hover,
 textarea:hover {
     box-shadow: 0 0 2px rgb(192, 93, 1);
 }
+
+p {
+    line-height: 1.4;
+}

@@ -4,9 +4,15 @@
 
 .ingredients {
     display: flex;
+    align-items: center;
     gap: 10px;
-    margin: 0;
-    padding: 0;
+    position: relative;
+}
+
+.ingredients Button {
+    position: absolute;
+    right: 0;
+    bottom: 21px;
 }
 
 .h2 {

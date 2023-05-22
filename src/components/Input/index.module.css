@@ -15,6 +15,10 @@
     width: 184px;
 }
 
+.error {
+    border-color: red;
+}
+
 .md {
     width: 400px;
 }

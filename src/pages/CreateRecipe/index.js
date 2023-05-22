@@ -113,6 +113,15 @@ const CreateRecipe = () => {
                                 size='sm'
                                 errors={errors.ingredients[i].ingredient}
                             />
+                            {i > 0 && (
+                                <Button
+                                    text='X'
+                                    idx={row.id}
+                                    handler={(e) =>
+                                        removeObjectFromArray(e, 'ingredients')
+                                    }
+                                />
+                            )}
                         </div>
                     ))}
                     <Button

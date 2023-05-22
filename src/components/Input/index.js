@@ -15,11 +15,11 @@ const Input = ({
         <div className={classes.container}>
             <label htmlFor={name}>{label}</label>
             <input
-                className={
+                className={`${
                     (size === 'sm' && classes.sm) ||
                     (size === 'md' && classes.md) ||
                     (size === 'xl' && classes.xl)
-                }
+                } ${errors && classes.error}`}
                 type={type}
                 id={name}
                 name={name}
