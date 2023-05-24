@@ -1,5 +1,6 @@
 import axios from 'axios';
 import { v4 as uuid } from 'uuid';
+import Swal from 'sweetalert2';
 import useForm from '../../hooks/useForm';
 import Select from '../../components/Select';
 import Ingredients from '../../components/Ingredients';
@@ -35,9 +36,21 @@ const CreateRecipe = () => {
                 id: uuid(),
                 ...formData,
             });
-            alert('Recipe posted');
+            Swal.fire({
+                title: 'Recipe Posted!',
+                text: `Thank you for sharing your delicious recipe ${formData.name}! \n Recipe is now available at the recipes page.`,
+                imageUrl: formData.imageUrl,
+                imageWidth: 400,
+                imageHeight: 200,
+                imageAlt: formData.name,
+            });
         } catch (err) {
             console.log('Error: ' + err);
+            Swal.fire({
+                icon: 'error',
+                title: 'Oops...',
+                text: 'Server down!',
+            });
         }
     };
 

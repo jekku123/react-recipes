@@ -14,13 +14,4 @@ const Ingredients = ({ children }) => {
 
 export default Ingredients;
 
-/* UNCOMMENT TO GET DELETE BUTTON 
-                     <div>
-                        <Button
-                            text='Remove'
-                            idx={row.id}
-                            handler={(e) =>
-                                removeObjectFromArray(e, 'ingredients')
-                            }
-                        />
-                    </div> */
+
