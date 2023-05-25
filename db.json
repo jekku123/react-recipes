@@ -1,105 +1,57 @@
 {
-  "recipes": [
-    {
-      "id": "7692e9af-9a01-4f09-bc62-1906509607b8",
-      "name": "Spagetti",
-      "author": "Jesse",
-      "country": "FI",
-      "description": "Desc",
-      "imageUrl": "https://thumbs.dreamstime.com/b/bread-6894025.jpg",
-      "ingredients": [
+    "recipes": [
         {
-          "id": "feebaf74-0da6-4903-a31c-2e6909b21681",
-          "quantity": "1L",
-          "ingredient": "Milk"
+            "id": "7692e9af-9a01-4f09-bc62-1906509607b8",
+            "name": "Spagetti",
+            "author": "Jesse",
+            "country": "FI",
+            "description": "Desc",
+            "imageUrl": "https://thumbs.dreamstime.com/b/bread-6894025.jpg",
+            "ingredients": [
+                {
+                    "id": "feebaf74-0da6-4903-a31c-2e6909b21681",
+                    "quantity": "1L",
+                    "ingredient": "Milk"
+                },
+                {
+                    "id": "16464cfb-5fe4-4440-9484-e2839dd69b24",
+                    "quantity": "1L",
+                    "ingredient": "Water"
+                }
+            ],
+            "instructions": "Good food"
         },
         {
-          "id": "16464cfb-5fe4-4440-9484-e2839dd69b24",
-          "quantity": "1L",
-          "ingredient": "Water"
-        }
-      ],
-      "instructions": "Good food"
-    },
-    {
-      "id": "daa273d5-ef0d-4841-9b81-398c6f9c105a",
-      "name": "Good soup",
-      "author": "Timo",
-      "country": "AO",
-      "description": "Good food",
-      "imageUrl": "https://images.immediate.co.uk/production/volatile/sites/30/2020/08/chorizo-mozarella-gnocchi-bake-cropped-9ab73a3.jpg?quality=90&resize=960,872",
-      "ingredients": [
+            "id": "daa273d5-ef0d-4841-9b81-398c6f9c105a",
+            "name": "Good soup",
+            "author": "Timo",
+            "country": "AO",
+            "description": "Good food",
+            "imageUrl": "https://images.immediate.co.uk/production/volatile/sites/30/2020/08/chorizo-mozarella-gnocchi-bake-cropped-9ab73a3.jpg?quality=90&resize=960,872",
+            "ingredients": [
+                {
+                    "id": "a6233c28-d456-4ec2-be44-270425838ef8",
+                    "quantity": "1",
+                    "ingredient": "Milk"
+                }
+            ],
+            "instructions": "GG"
+        },
         {
-          "id": "a6233c28-d456-4ec2-be44-270425838ef8",
-          "quantity": "1",
-          "ingredient": "Milk"
+            "id": "98629c37-423f-4a38-a7fc-44593fa7e04e",
+            "name": "saddas",
+            "author": "asddasdas",
+            "country": "AI",
+            "description": "dadssadsad",
+            "imageUrl": "https://img.freepik.com/free-photo/top-view-table-full-delicious-food-composition_23-2149141353.jpg",
+            "ingredients": [
+                {
+                    "id": "ed51d9b1-e5f4-4488-b588-f5882d69bfae",
+                    "quantity": "2",
+                    "ingredient": "sdas"
+                }
+            ],
+            "instructions": "sdadsdsdassa"
         }
-      ],
-      "instructions": "GG"
-    },
-    {
-      "id": "98629c37-423f-4a38-a7fc-44593fa7e04e",
-      "name": "saddas",
-      "author": "asddasdas",
-      "country": "AI",
-      "description": "dadssadsad",
-      "imageUrl": "https://img.freepik.com/free-photo/top-view-table-full-delicious-food-composition_23-2149141353.jpg",
-      "ingredients": [
-        {
-          "id": "ed51d9b1-e5f4-4488-b588-f5882d69bfae",
-          "quantity": "2",
-          "ingredient": "sdas"
-        }
-      ],
-      "instructions": "sdadsdsdassa"
-    },
-    {
-      "id": "d56bba9c-087d-4c5f-9178-b0144d8cca32",
-      "name": "sadasd",
-      "author": "saddasdasasd",
-      "country": "AD",
-      "description": "adsdssadsad",
-      "imageUrl": "https://img.freepik.com/free-photo/top-view-table-full-delicious-food-composition_23-2149141353.jpg",
-      "ingredients": [
-        {
-          "id": "ed51d9b1-e5f4-4488-b588-f5882d69bfae",
-          "quantity": "2",
-          "ingredient": "sadsasd"
-        }
-      ],
-      "instructions": "dasdsdsadsads"
-    },
-    {
-      "id": "ea4da277-f563-4f74-8232-761feaa1d58f",
-      "name": "sad",
-      "author": "sadsddas",
-      "country": "AI",
-      "description": "asdadsasd",
-      "imageUrl": "https://img.freepik.com/free-photo/top-view-table-full-delicious-food-composition_23-2149141353.jpg",
-      "ingredients": [
-        {
-          "id": "9cf3d20d-de64-463d-a974-434b9f287b8b",
-          "quantity": "as",
-          "ingredient": "dsaddas"
-        }
-      ],
-      "instructions": "dsdasdasas"
-    },
-    {
-      "id": "1e00e187-727a-4ccb-8790-5c0663881286",
-      "name": "HEHE",
-      "author": "dasdasdas",
-      "country": "AI",
-      "description": "dadasdsa",
-      "imageUrl": "www.keke.com",
-      "ingredients": [
-        {
-          "id": "1d36aa7f-a4ec-4062-9cf3-2fb97ef46f88",
-          "quantity": "asd",
-          "ingredient": "asddas"
-        }
-      ],
-      "instructions": "dsddasdasdasdsa"
-    }
-  ]
+    ]
 }

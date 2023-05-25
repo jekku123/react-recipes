@@ -6,6 +6,7 @@ const useForm = (init) => {
     const [formData, setFormData] = useState(init);
     const [errors, setErrors] = useState(init);
 
+    // objArrayIdentifier = key for the array of objects
     const removeObjectFromArray = useCallback((e, objArrayIdentifier) => {
         const id = e.target.dataset.idx;
         setFormData((prevData) => ({
@@ -16,6 +17,8 @@ const useForm = (init) => {
         }));
     }, []);
 
+    // objArrayIdentifier = key for the array of objects
+    // fields = array with names of the fields inside the array of objects
     const insertObjectToArray = useCallback(
         (objArrayIdentifier, fields) => {
             const newField = fields.reduce(
@@ -40,6 +43,8 @@ const useForm = (init) => {
         [formData, errors]
     );
 
+    // objArrayIdentifier = key for the array of objects
+    // arrayObjKey = key of the value being accessed inside the array of objects
     const handleFormChanges = useCallback(
         (e, objArrayIdentifier, arrayObjKey) => {
             const { name, value, dataset } = e.target;

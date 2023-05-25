@@ -4,12 +4,12 @@ import Footer from '../Footer';
 import './index.css';
 const Layout = () => {
     return (
-        <div className='container'>
+        <div className='page-container'>
             <div className='page-content'>
                 <Header />
                 <Main />
-                <Footer />
             </div>
+            <Footer />
         </div>
     );
 };
