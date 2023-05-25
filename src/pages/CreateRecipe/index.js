@@ -28,7 +28,7 @@ const CreateRecipe = () => {
         insertObjectToArray,
         handleSubmit,
         errors,
-    } = useForm(initialValues, () => submit());
+    } = useForm(initialValues);
 
     const submit = async () => {
         try {
@@ -57,7 +57,7 @@ const CreateRecipe = () => {
     return (
         <>
             <h2 className={classes.h2}>Add new recipe</h2>
-            <Form onSubmit={handleSubmit}>
+            <Form onSubmit={(e) => handleSubmit(e, submit)}>
                 <Input
                     label='Name'
                     name='name'

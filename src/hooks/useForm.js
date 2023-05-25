@@ -2,7 +2,7 @@
 import { useCallback, useState } from 'react';
 import { v4 as uuid } from 'uuid';
 
-const useForm = (init, submit) => {
+const useForm = (init) => {
     const [formData, setFormData] = useState(init);
     const [errors, setErrors] = useState(init);
 
@@ -72,7 +72,7 @@ const useForm = (init, submit) => {
         []
     );
 
-    const handleSubmit = (e) => {
+    const handleSubmit = (e, submit) => {
         e.preventDefault();
         if (!checkErrors()) {
             submit(formData);
