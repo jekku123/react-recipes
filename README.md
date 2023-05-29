@@ -23,6 +23,11 @@ Built with:
 -   GET and POST to JSON-server db.json
 -   Optimized and clean code without errors or warnings
 
+### Extra features
+
+-   Home made reactive validation / error handling for the form
+-   Ability to remove ingredients while making a recipe
+
 ## To run this app
 
 -   `git clone` https://github.com/jekku123/react-recipes
