@@ -1,14 +1,16 @@
 import axios from 'axios';
 import { v4 as uuid } from 'uuid';
 import useForm from '../../hooks/useForm';
-import Select from '../../components/Select';
+import Select from '../../components/Form/Select';
 import Ingredients from '../../components/Ingredients';
-import Input from '../../components/Input';
-import TextArea from '../../components/TextArea';
-import Button from '../../components/Button';
-import Form from '../../UI/Form';
+import Input from '../../components/Form/Input';
+import TextArea from '../../components/Form/TextArea';
+import Button from '../../components/UI/Button';
+import Form from '../../components/Form';
 import { alertBox } from '../../utils/alert';
 import classes from './index.module.css';
+
+const { countryOptions } = require('../../data/countries.json');
 
 const initialValues = {
     name: '',
@@ -61,8 +63,10 @@ const CreateRecipe = () => {
                     errors={errors.author}
                 />
                 <Select
-                    label='Choose a country'
+                    label='Recipe is from'
                     name='country'
+                    placeholder='Choose a country'
+                    options={countryOptions}
                     handler={handleFormChanges}
                     value={formData.country}
                     errors={errors.country}

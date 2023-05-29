@@ -1,8 +1,8 @@
 import { useState } from 'react';
-import RecipeCard from '../../components/RecipeCard';
+import RecipeCard from '../../components/UI/RecipeCard';
 import useAxios from '../../hooks/useAxios';
+import Input from '../../components/Form/Input';
 import classes from './index.module.css';
-import Input from '../../components/Input';
 
 const { url } = require('../../config/api.json');
 

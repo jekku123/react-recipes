@@ -1,5 +1,5 @@
-import HeroBanner from '../../UI/HeroBanner';
-import Card from '../../components/Card';
+import HeroBanner from '../../components/HeroBanner';
+import Card from '../../components/UI/Card';
 import classes from './index.module.css';
 
 const Home = () => {

@@ -1,9 +1,8 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-
+import Button from '../UI/Button';
 import bannerVideo from '../../assets/videos/foodvideo.mp4';
 import classes from './index.module.css';
-import Button from '../../components/Button';
 
 const HeroBanner = () => {
     return (

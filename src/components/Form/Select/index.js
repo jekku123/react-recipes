@@ -1,10 +1,17 @@
 import classes from './index.module.css';
-const { countryOptions } = require('../../data/countries.json');
 
-const Select = ({ name, value, handler, errors }) => {
+const Select = ({
+    label,
+    name,
+    placeholder,
+    options,
+    value,
+    handler,
+    errors,
+}) => {
     return (
         <div className={classes.container}>
-            <label htmlFor='country'>Recipe is from</label>
+            <label htmlFor={name}>{label}</label>
             <select
                 name={name}
                 id={name}
@@ -13,11 +20,12 @@ const Select = ({ name, value, handler, errors }) => {
                 className={`${errors && classes.error}`}
             >
                 <option value='' default>
-                    Choose a country
+                    {placeholder}
                 </option>
-                {countryOptions.map((country) => (
-                    <option key={country.code} value={country.code}>
-                        {country.name}
+
+                {options.map((option) => (
+                    <option key={option.code} value={option.code}>
+                        {option.name}
                     </option>
                 ))}
             </select>
