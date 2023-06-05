@@ -32,5 +32,4 @@ Built with:
 
 -   `git clone` https://github.com/jekku123/react-recipes
 -   `npm install` to install dependecies
--   `npm run server` to run JSON server
--   `npm start` to run the app
+-   `npm start` to run client + json server

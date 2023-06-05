@@ -1,94 +1,57 @@
 {
-  "recipes": [
-    {
-      "id": "7692e9af-9a01-4f09-bc62-1906509607b8",
-      "name": "Spagetti",
-      "author": "Jesse",
-      "country": "FI",
-      "description": "Desc",
-      "imageUrl": "https://thumbs.dreamstime.com/b/bread-6894025.jpg",
-      "ingredients": [
+    "recipes": [
         {
-          "id": "feebaf74-0da6-4903-a31c-2e6909b21681",
-          "quantity": "1L",
-          "ingredient": "Milk"
+            "id": "7692e9af-9a01-4f09-bc62-1906509607b8",
+            "name": "Spagetti",
+            "author": "Jesse",
+            "country": "FI",
+            "description": "Desc",
+            "imageUrl": "https://thumbs.dreamstime.com/b/bread-6894025.jpg",
+            "ingredients": [
+                {
+                    "id": "feebaf74-0da6-4903-a31c-2e6909b21681",
+                    "quantity": "1L",
+                    "ingredient": "Milk"
+                },
+                {
+                    "id": "16464cfb-5fe4-4440-9484-e2839dd69b24",
+                    "quantity": "1L",
+                    "ingredient": "Water"
+                }
+            ],
+            "instructions": "Good food"
         },
         {
-          "id": "16464cfb-5fe4-4440-9484-e2839dd69b24",
-          "quantity": "1L",
-          "ingredient": "Water"
-        }
-      ],
-      "instructions": "Good food"
-    },
-    {
-      "id": "daa273d5-ef0d-4841-9b81-398c6f9c105a",
-      "name": "Good soup",
-      "author": "Timo",
-      "country": "AO",
-      "description": "Good food",
-      "imageUrl": "https://images.immediate.co.uk/production/volatile/sites/30/2020/08/chorizo-mozarella-gnocchi-bake-cropped-9ab73a3.jpg?quality=90&resize=960,872",
-      "ingredients": [
-        {
-          "id": "a6233c28-d456-4ec2-be44-270425838ef8",
-          "quantity": "1",
-          "ingredient": "Milk"
-        }
-      ],
-      "instructions": "GG"
-    },
-    {
-      "id": "98629c37-423f-4a38-a7fc-44593fa7e04e",
-      "name": "saddas",
-      "author": "asddasdas",
-      "country": "AI",
-      "description": "dadssadsad",
-      "imageUrl": "https://img.freepik.com/free-photo/top-view-table-full-delicious-food-composition_23-2149141353.jpg",
-      "ingredients": [
-        {
-          "id": "ed51d9b1-e5f4-4488-b588-f5882d69bfae",
-          "quantity": "2",
-          "ingredient": "sdas"
-        }
-      ],
-      "instructions": "sdadsdsdassa"
-    },
-    {
-      "id": "31f80493-88ff-42d0-9cb0-127f4b36c775",
-      "name": "recipe",
-      "author": "sdaddasads",
-      "country": "AS",
-      "description": "adsadsdsdsaasd",
-      "imageUrl": "www.keke.com",
-      "ingredients": [
-        {
-          "id": "dc4531c8-9da0-45e1-b4e3-0da31011a64d",
-          "quantity": "1",
-          "ingredient": "sadas"
+            "id": "daa273d5-ef0d-4841-9b81-398c6f9c105a",
+            "name": "Good soup",
+            "author": "Timo",
+            "country": "AO",
+            "description": "Good food",
+            "imageUrl": "https://images.immediate.co.uk/production/volatile/sites/30/2020/08/chorizo-mozarella-gnocchi-bake-cropped-9ab73a3.jpg?quality=90&resize=960,872",
+            "ingredients": [
+                {
+                    "id": "a6233c28-d456-4ec2-be44-270425838ef8",
+                    "quantity": "1",
+                    "ingredient": "Milk"
+                }
+            ],
+            "instructions": "GG"
         },
         {
-          "id": "ff7edc3a-140d-4d74-81b7-de294accd4d9",
-          "quantity": "2",
-          "ingredient": "asdas"
+            "id": "98629c37-423f-4a38-a7fc-44593fa7e04e",
+            "name": "saddas",
+            "author": "asddasdas",
+            "country": "AI",
+            "description": "dadssadsad",
+            "imageUrl": "https://img.freepik.com/free-photo/top-view-table-full-delicious-food-composition_23-2149141353.jpg",
+            "ingredients": [
+                {
+                    "id": "ed51d9b1-e5f4-4488-b588-f5882d69bfae",
+                    "quantity": "2",
+                    "ingredient": "sdas"
+                }
+            ],
+            "instructions": "sdadsdsdassa"
         }
-      ],
-      "instructions": "sadasdsadsaads"
-    },
-    {
-      "id": "115d3ab5-d68a-4f9f-94c7-1c731cf98169",
-      "name": "Best ffood",
-      "author": "Jesse",
-      "country": "DZ",
-      "description": "sadsdsadas",
-      "imageUrl": "www.koko.com",
-      "ingredients": [
-        {
-          "id": "dc4531c8-9da0-45e1-b4e3-0da31011a64d",
-          "quantity": "1",
-          "ingredient": "dsadsadsads"
-        }
-      ],
-      "instructions": "sdaasddasdas"
-    }
-  ]
+    ]
 }
